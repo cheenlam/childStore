@@ -1,0 +1,359 @@
+.returnBox{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0 100px;
+    margin: auto;
+}
+
+.rtnTitle{
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0d7cc;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3493fb;
+}
+
+.rtnMsg{
+    padding: 15px 0;
+    border-bottom: 1px solid #e0d7cc;
+    font-size: 12px;
+    color: #83521e;
+}
+
+.rtnMsg ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rtnMsg li{
+    padding: 5px 10px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.rtnList{
+    padding: 20px 10px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #e0d7cc;
+}
+
+.rtnList select,
+.rtnList input{
+    background-color: transparent;
+}
+
+.rtnList h5{
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #459cf9;
+    letter-spacing: 1px;
+    font-family: 'CloudCalligraphy','Playfair Display';
+}
+
+.rtnList table{
+    width: 100%;
+}
+
+.rtnList th{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #c6b198;
+    color: #cca87c;
+}
+
+.rtnList td{
+    min-height: 35px;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    color: #cca87c;
+}
+
+.rtnList td:nth-child(2){
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #3493fb;
+    font-family: 'CloudCalligraphy';
+}
+
+.rtnList td:nth-child(3){
+    color: #81688c;
+}
+
+
+.rtnList th:nth-child(3),
+.rtnList td:nth-child(3){
+    text-align: left;
+}
+
+.rtnList label>div{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    cursor: pointer; 
+    margin: auto;  
+}
+
+.rtnList input[type="checkbox"],
+.rtnList input[type="checkbox"]+span{
+    display: none;
+}
+
+.rtnList input[type="checkbox"]:checked+span{
+    display: block;
+}
+
+.rtnList select{
+    width: 50px;
+    height: 30px;
+    border: 1px solid #ccc;
+    color: #999;
+    border-radius: 3px;
+    outline: none;
+}
+
+.rtnList input[type="text"]{
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    border-radius: 3px;
+    outline: none;
+    color: #999;
+    border: 1px solid #ccc;
+}
+
+.rtnList select:focus,
+.rtnList input[type="text"]:focus{
+    border: 1px solid #3493fb;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+/* ===== rtnDesc (退換貨說明) start =====  */
+.rtnDesc{
+    padding: 50px 10px 0 25px;
+    font-size: 10px;
+    color: #cca87c;
+}
+
+.rtnDesc ul{
+    font-size: 10px;
+    list-style-type: disc;
+}
+
+.rtnDesc li{
+    line-height: 25px;
+}
+
+/* ===== rtnBtn start ===== */
+.rtnBtn{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rtnBtn>div{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.rtnBtn label>div{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    border-radius: 3px;
+    border: 1px solid #999;
+    cursor: pointer; 
+}
+
+.rtnBtn input+span,
+.rtnBtn input{
+    display: none;
+}
+
+.rtnBtn input:checked+span{
+    display: block;
+}
+
+.rtnBtn button{
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+    border: 2px solid #81688c;
+    font-family: 'CloudCalligraphy';
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #81688c;
+    outline: none;
+    background-color: transparent;  
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.rtnBtn button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #90c2f3;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+}
+
+/* ===== rtnBtn (申請送出彈窗) start ===== */
+.rtnDialog{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 0; 
+}
+
+.rtnDialog.on{
+    opacity: 1;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.rtnCnt{
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #a39380;
+    overflow: hidden;
+    text-align: center;
+}
+
+.rtnCnt>div{
+    height: calc(100% - 50px);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rtnCnt p{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #3493fb;
+}
+
+.rtnCnt li{
+    line-height: 25px;
+    font-size: 10px;
+}
+
+.rtnCnt button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 12px 0 #5b7fa3 inset;
+    background-color: #90C2F3;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+/* ========== 共同設定 ========== */
+/* hover & active 各別設定 */
+/* .rtnBtn (訂單清單按鈕) */
+@media (any-hover: hover){
+    .rtnBtn button:hover{
+        background-color: #90c2f3;
+        color: #fff;
+    }
+    .rtnBtn button:hover::before{
+        border: 2px solid transparent;
+    }
+}
+
+.rtnBtn button:active{
+    background-color: #90c2f3;
+    color: #fff;
+}
+.rtnBtn button:active::before{
+    border: 2px solid transparent;
+}
+
+/* rtnBtn (申請送出視窗)  */
+@media (any-hover: hover){
+    .rtnCnt button:hover{background-color: #accff1;}
+}
+.rtnCnt button:active{background-color: #accff1;}
+
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 900px){
+    .rtnList tr:first-child{
+        display: none;
+    }
+
+    .rtnList h5{
+        border-bottom: 1px dashed #c6b198;
+    }
+
+    .rtnList tr{
+        display: flex;
+        flex-direction: column;  
+        border: 2px solid #fff;
+        box-sizing: border-box;
+    }
+
+    .rtnList tr+tr{
+        margin-top: 20px;
+    }
+
+    .rtnList td{
+        padding: 10px;
+        min-height: unset;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(238, 238, 238, 0.5);
+    }
+
+    .rtnList td+td{
+        border-top: 1px solid #fff;
+    }
+
+    .rtnList td::before{
+        content: attr(data-name);
+        flex-shrink: 0;
+        margin-right: 10px;
+        font-size: 12px;
+        color: #cca87c;
+    }
+}

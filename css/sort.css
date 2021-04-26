@@ -1,0 +1,39 @@
+.sortBox {
+    width: 100%;
+}
+
+.sortCnt {
+    width: 100%;
+    max-width: 1200px;
+    padding: 5px 10px 100px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+  
+/* ==== sortRight start ===== */
+.sortRight {
+    width: 900px;
+}
+
+.sort_topImg{
+    margin-bottom: 50px;
+}
+  
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px) {
+    .sortBox {
+      width: 100%;
+    }
+  
+    .sortCnt{
+        flex-direction: column;
+    }
+  
+    .sortRight {
+      width: 100%;
+      margin-left: 0;
+    }
+}

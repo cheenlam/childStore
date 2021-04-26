@@ -1,0 +1,972 @@
+.mbrBox{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 10px 100px;
+    margin: auto;
+}
+
+.mbrBox .crumbs{
+    padding: 10px 0;
+}
+
+.mbrBody>div{
+    display: none;
+}
+
+.mbrBody>div.on{
+    display: block;
+}
+
+/* ===== mbrName start ===== */
+.mbrName{
+    padding: 20px 0 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.mbrName span{
+    padding-left: 5px;
+    color: #3493fb;
+}
+
+.mbrName a{
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;
+    color: #b0b0b0;
+    transition: color 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.mbrName a::before{
+    content: attr(data-hover);
+    width: 100px; 
+    background-color: #fff;
+    color: #83521e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+/* ===== mbrContent start ===== */
+.mbrContent{
+    width: 100%;
+    padding: 40px 10px;
+    border: 1px solid #ddd;
+    margin: 50px auto 50px;
+    position: relative;
+}
+
+.mbrContent input,
+.mbrContent select{
+    background-color:transparent;
+}
+
+.mbrContent input:focus,
+.mbrContent select:focus{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* mbrSelect start */
+.mbrSelect{
+    width: calc(100% + 2px);
+    position: absolute;
+    top: -45px;
+    right: -1px;
+}
+
+.mbrSelect ul{
+    width: 100%;
+    display: flex;
+}
+
+.mbrSelect li{
+    width: calc(100% / 4);
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-top: 3px solid #CCC7C7;
+    color: #b0b0b0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.mbrSelect li:last-child{
+    border-right: 1px solid #ddd;
+}
+
+.mbrSelect li.on{
+    color: #706e6c;
+    box-shadow: 1px 1px 4px #999 inset;
+    border-top: 3px solid #aaa;
+}
+
+/* ===== mbrMsg start (個人資訊) ===== */
+
+.mbrMsg ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.mbrMsg li{
+    width: 50%;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mbrMsg input + span{
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #CCC7C7;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.mbrMsg input:valid + span{
+    visibility: visible;
+}
+
+.mbrMsg input{
+    width: calc(100% - 80px);
+    height: 35px;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+    color: #666;
+}
+
+.mbrMsg input:focus,
+.mbrMsg select:focus{
+    border: 1px solid #3493fb;
+}
+
+.mbrMsg select{
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+}
+
+.mbrMsg label{
+    width: 80px;
+    flex-shrink: 0;
+    color: #666;
+    letter-spacing: 1.5px;
+}
+
+.mbrMsg span{
+    color: #3493fb;
+    padding-right: 10px;
+}
+
+.mbrAdd{
+    line-height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mbrAdd input{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.mbrMsg .mbrPwd{
+    height: 35px;
+}
+
+.mbrPwd span{
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.mbrMsg_btn{
+    padding-top: 50px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mbrMsg_btn button{
+    height: 35px;
+    padding: 0 10px;
+    color: #969696;
+    border: 1px solid #969696;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mbrMsg_btn button+button{
+    margin-left: 5px;
+}
+
+
+/* ===== mbrOrder start (訂單查詢) ===== */
+.mbrOrder>div{
+    display: none;
+}
+
+.mbrOrder>div.on{
+    display: block;
+}
+
+/* order_select start */
+.order_select{
+    max-width: 800px;
+    padding: 20px 0;
+    margin: auto;
+    font-size: 14px;
+    color: #666;
+}
+
+.order_select li{
+    display: flex;
+    padding-bottom: 25px;
+}
+
+.order_select label{
+    height: 35px;
+    line-height: 35px;
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
+.order_select li>div{
+    width: 100%;
+}
+
+.order_ipt{
+    position: relative;
+}
+
+.order_ipt span{
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #CCC7C7;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: color 0.3 linear;
+}
+
+.order_ipt input + span{
+    visibility: hidden;
+}
+
+.order_ipt input:valid + span{
+    visibility: visible;
+}
+
+.order_ipt input{
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border: 1px solid #CCC7C7;
+}
+
+.order_ipt input:focus{
+    border: 1px solid #3493fb;
+}
+
+.order_point{
+    font-size: 10px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    color: #a3a3a3;
+}
+.order_point p{
+    padding-left: 5px;
+}
+
+.order_btn{
+    padding-top: 50px;
+    text-align: right;
+}
+
+.order_btn button{
+    width: 95px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #969696;
+    color: #969696;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+/* order_msg start */
+.order_msg .orderDel{
+    display: none;
+}
+
+.order_msg li span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order_msg li+li{
+    font-size: 14px;
+}
+
+.orderMsg_top{
+    color: #666;
+    text-align: center;
+}
+
+.orderMsg_top h6{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3493fb;
+    padding-bottom: 20px;
+}
+
+.fettle_1,
+.fettle_2,
+.fettle_3,
+.fettle_4{
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 3px;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.fettle_1{ background-color: #f57c66; }
+.fettle_2{ background-color: #999797; }
+.fettle_3{ background-color: #7ace70; }
+.fettle_4{ background-color: #f8c55f; }
+
+.orderMsg_top p{
+    letter-spacing: 1px;
+}
+
+/* ===== mbrHistory start (購物紀錄) ===== */
+.mbrHistory{
+    width: 100%;
+    padding: 0 10px 40px;
+    overflow-x: auto;
+}
+
+.mbrHistory table{
+    width: 100%;
+    color: #636363;
+    font-size: 12px;
+}
+
+.mbrHistory th,
+.mbrHistory td{
+    height: 40px;
+    min-height: 40px;
+    padding: 5px;
+    text-align: center;
+    color: #cca87c;
+}
+
+.mbrHistory tr:first-child{
+    border-bottom: 1px dashed #c6b198;
+}
+
+.mbrHistory a{
+    color: #3493fb;
+    text-decoration: underline;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mbrHistory tt::before{
+    content: 'NT$ ';
+    font-family: 'CloudCalligraphy';
+    font-size: 13px;
+}
+
+.mbrHistory tr:nth-child(even) td{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.mbrHistory p{
+    padding-top: 20px;
+    font-size: 10px;
+    color: #A94442;
+}
+
+.history_btn{
+    width: 100%;
+    padding-top: 50px;
+    text-align: right;
+}
+
+.mbrHistory td:last-child button,
+.history_btn button{
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #969696;
+    color: #969696;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+/* ===== orderStatus start (訂單狀態說明視窗) ===== */
+.orderStatus{
+    width: fit-content;
+    height: 90%;
+    padding-top: 50px;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    background-color: #fff;
+    box-shadow: 0 0 8px #333;
+    opacity: 0;
+}
+
+.orderStatus.on{
+    z-index: 9999;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.orderStatus>span{
+    font-size: 25px;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.statusClose{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+  }
+.statusClose::before,
+.statusClose::after{
+    width: 60px;
+    height: 35px;
+    margin: auto;
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statusClose::after{
+    content: '\00ab';
+    transform:  rotate(90deg);
+}
+.statusClose::before{
+    content: '';
+    border-radius: 5px 5px 0 0;
+    background-color: #000;
+}
+
+.statusCnt{
+    width: 100%;
+    width: 800px;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 1;
+    -ms-overflow-style: none;
+    letter-spacing: .2em;
+}
+
+.statusCnt::-webkit-scrollbar {
+    display: none;
+}
+
+.statusCnt h6{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3493fb; 
+}
+.statusCnt td{
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.statusCnt td:first-child{
+    width: 90px;
+}
+
+.statusCnt P{
+    font-size: 1px;
+    color: #636363;
+}
+
+
+/* ===== mbrSignout start (會員登出視窗) ===== */
+.mbrSignout{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 0;  
+}
+
+.mbrSignout.on{
+    opacity: 1;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.signoutCnt{
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #a39380;
+    overflow: hidden;
+}
+
+.signoutCnt>div{
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signoutCnt h5{
+    color: #3493fb;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.signoutCnt button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 13px;
+    box-shadow: 0 0 12px 0 #5b7fa3 inset;
+    background-color: #90C2F3;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+
+/* ===== collAdd start (加入購物車選擇視窗) ===== */
+.collAdd{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translateY(100%);  
+}
+
+.collAdd.on{
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+
+.collAdd_close{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.collAdd_cnt{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.collAdd_cnt>div{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+.collAdd_cnt>div>span{
+    font-size: 20px;
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.collAdd_img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.collAdd_msg{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collAdd_title{
+    color: #999;
+    font-size: 12px;
+    padding-right: 20px;
+    flex: 2;
+}
+
+.collAdd_title h4{
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #90c2f3;
+    font-family: 'CloudCalligraphy';
+}
+
+
+.collAdd_title h5{
+    max-width: 300px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #81688c;
+    padding: 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.collAdd .newPrice{
+    text-decoration: line-through;
+    padding-right: 10px;
+}
+
+.collAdd .discPrice{
+    font-size: 18px;
+    color: #ff5353;
+}
+
+.collAdd .newPrice::before,
+.collAdd .discPrice::before{
+    content: 'NT$ ';
+    font-size: 12px;
+}
+
+.collAdd_title>div:last-child{
+    display: flex;
+    align-items: flex-end;
+}
+
+.collAdd_select{
+    padding-right: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.collAdd .sale_count{
+    min-width: 200px;
+    max-width: unset;
+    padding-top: 0;
+    flex: 1;
+}
+
+.collAdd .sale_count ul{
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.collAdd .sale_count li{
+    width: 100%;
+}
+
+.collAdd .sale_count li+li{
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+
+/* ========== 共同設定 ========== */
+/* hover & active 各別設定 */
+/* mbrName (會員名稱) */
+@media (any-hover: hover){
+    .mbrName a:hover{color: #3493fb;}
+}
+.mbrName a:active{color: #3493fb;}
+
+
+/* mbrBody (會員資訊內容) */
+@media (any-hover: hover){ 
+    .mbrPwd span:hover,
+    .mbrMsg span:hover,
+    .order_ipt span:hover,
+    .mbrHistory a:hover{color: #666;}
+    .mbrPwd span:hover{text-decoration: underline; }
+    .mbrHistory td:last-child button:hover,
+    .history_btn button:hover,
+    .order_btn button:hover,
+    .mbrMsg_btn button:hover{
+        border: 1px solid #3493fb;
+        color: #3493fb;
+        background-color: #fff;
+    }
+    .mbrHistory td:last-child button:hover,
+    .history_btn button:hover{
+        background-color: #fff;
+    }  
+}
+
+.mbrPwd span:active,
+.mbrMsg span:active,
+.order_ipt span:active,
+.mbrHistory a:active{color: #666;}
+.mbrPwd span:active{
+    text-decoration: underline;
+}
+.mbrHistory td:last-child button:active,
+.history_btn button:active,
+.order_btn button:active,
+.mbrMsg_btn button:active{
+    border: 1px solid #3493fb;
+    color: #3493fb;
+    background-color: #fff;
+}
+.mbrHistory td:last-child button:active,
+.history_btn button:active{
+    background-color: #fff;
+}
+
+/* orderStatus (訂單狀態說明視窗) */
+@media (any-hover: hover){
+    .orderStatus>span:hover{color: #333;}
+}
+.orderStatus>span:active{color: #333;}
+
+/* mbrSignout (會員登出視窗) */
+@media (any-hover: hover){
+    .signoutCnt button:hover{
+        background-color: #accff1;
+    }
+}
+.signoutCnt button:active{
+    background-color: #accff1;
+}
+
+/* ollAdd (加入購物車選擇視窗) */
+@media (any-hover: hover){
+    .collAdd_cnt>div>span:hover{color: #555;}
+}
+.collAdd_cnt>div>span:active{color: #555;}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 970px){ 
+    .collAdd_img,
+    .collAdd_select{
+        margin-bottom: 10px;
+    }
+
+    .collAdd_cnt>div,
+    .collAdd_msg{
+        flex-direction: column;
+    }
+  
+    .collAdd_select>div+div{
+        margin-left: 20px;
+    }
+
+    .collAdd .sale_count ul{
+        flex-direction: row;
+    }
+
+    .collAdd .sale_count li+li{
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    
+    .collAdd_select>div+div{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .mbrBox{
+        padding: 0;
+        padding-bottom: 50px;
+    }
+
+    .mbrBox .crumbs{
+        padding: 10px;
+    }
+
+    .mbrName{
+        padding: 20px 10px 5px;
+    }
+
+    .mbrContent{
+        border: none;
+    }
+
+    .mbrSelect{
+        width: 100%;
+        right: 0;
+    }
+
+    .mbrSelect li:last-child{
+        border-right: none;
+    }
+
+    .mbrMsg li{
+        width: 100%;
+    }
+     
+    .mbrHistory tr{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #fff;
+    }
+
+    .mbrHistory tr+tr{
+        margin-top: 20px;
+    }
+
+    .mbrHistory tr:first-child{
+        display: none;
+    }
+
+    .mbrHistory td{
+        width: 100%;
+        height: unset;
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(238, 238, 238, 0.5);
+        border-bottom: 1px solid #fff;
+    }
+
+    .mbrHistory td::before{
+        content: attr(data-title);
+        color: #cca87c;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .orderStatus{
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      transform: translateY(-100%); 
+    }
+
+    .orderStatus.on{
+       transform: translateY(0%);
+    }
+  
+    .orderStatus>span{
+      display: none;
+    }
+  
+    .statusClose{
+      display: block;
+    }
+  
+    .statusCnt{
+      width: 100%;
+      max-height: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 414px){
+    .mbrMsg li{
+        padding: 0 10px;
+    }
+    .mbrMsg_btn{
+        padding-right: 10px;
+    }
+
+    .mbrSelect{
+        font-size: 12px;
+    }
+    .order_select li{
+        flex-direction: column;
+    } 
+}

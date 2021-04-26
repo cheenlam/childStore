@@ -1,0 +1,181 @@
+.aboutBox{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.aboutCnt{
+    width: 100%;
+    display: flex;
+}
+
+/* ===== abtLeft start ===== */
+.abtLeft{
+    width: 260px;
+}
+
+.abtmenu{
+    height: 45px;
+    margin-bottom: 20px;
+    letter-spacing: .05em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    color: #6791bb;
+}
+
+.abtmenu h6,
+.abtmenu P{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'CloudCalligraphy';
+}
+
+.abtmenu h6{
+    padding-bottom: 5px;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
+}
+
+.abtmenu p{
+    font-size: 30px;
+    padding-left: 15px;
+    color: #F2A6A9;
+    background: linear-gradient(90deg,#c79f62,#f9c125,#84bfe8,#f2a6a9,#bc76b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.abtmenu span{
+    display: none;
+}
+
+.abtLeft li{
+    padding: 10px;
+    font-size: 14px;
+    color: #C79F62;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.abtLeft li+li{
+    border-top: 1px dashed #c6b198;
+}
+
+.abtLeft li.on,
+.abtLeft li:hover{
+    color: #fff;
+    background-color: #6da1d56b;
+}
+
+/* ===== abtRight start ===== */
+.abtRight{
+    width: calc(100% - 260px);
+    margin-left: 20px;
+}
+
+.abtTitle{
+    height: 45px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.abtTitle::before{
+    content: '';
+    width: 3px;
+    height: 30px;
+    background-color: rgb(74, 78, 92);
+    border-radius: 40% / 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.abtList{
+    font-size: 14px;
+}
+
+.abtList img{
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px){
+    .aboutCnt{
+        padding: 0 10px;
+        flex-direction: column;
+    }
+    .abtLeft{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .abtmenu{
+        border: 1px solid #ccc;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s;     
+    }
+
+    .abtmenu h6{
+        height: 12px;
+        padding-bottom: 0;
+    }
+
+    
+    @media (any-hover: hover){
+        .abtmenu:hover{
+            background-color: #f8c2d1a3;
+        }
+    }
+    
+    .abtmenu:active{
+        background-color: #f8c2d1a3;
+    }
+
+    .abtmenu.on+ul{
+        height: auto;
+        transform: rotateX(0deg);
+    }
+
+    .abtmenu.on span{
+        transform: rotate(180deg);
+    }
+
+    .abtmenu span{
+        display: block;
+        font-size: 20px;
+        transform: rotate(0deg);
+        transition: all 0.3s, color 0s;
+        position: absolute;
+        right: 10px;
+    }
+
+    .abtmenu p{
+       padding-left: 10px;
+    }
+
+    .abtLeft ul{
+        height: 0;
+        transform: rotateX(90deg);
+        transform-origin: center top;
+        transition: 0.5s;
+    }
+
+    .abtRight{
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}

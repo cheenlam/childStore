@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="../css/return.css">
+<!-- =======================================-->
+
+<div class="returnBox">
+    <div class="rtnTitle">申請退換貨</div>
+    <div class="rtnMsg">
+        <ul>
+            <li>聯絡人：<span>testName</span></li>
+            <li>訂單編號：<span>CWT0000001900</span></li>
+        </ul>
+    </div>
+
+    <!-- ===== rtnList (訂單清單) start ===== -->
+    <div class="rtnList">
+        <h5>ORDER LIST 訂單列表</h5>
+        <table>
+            <tr>
+                <th width="5%">勾選</th>
+                <th width="15%">商品編號</th>
+                <th width="25%">商品名稱</th>
+                <th width="10%">訂購數量</th>
+                <th width="10%">退貨數量</th>
+                <th width="35%">退貨原因</th>
+            </tr>
+            <tr>
+                <td data-name="勾選：">
+                    <label for="rtnCheck_01">
+                        <div>
+                            <input type="checkbox" id="rtnCheck_01">
+                            <span>✓</span>
+                        </div>       
+                    </label>        
+                </td>
+                <td data-name="商品編號：">#A123456789</td>
+                <td data-name="商品名稱：">泡泡袖十字前交叉提花歐根紗洋裝</td>
+                <td data-name="訂購數量：">1</td>
+                <td data-name="退貨數量：">
+                    <select>
+                        <option>1</option>
+                    </select>
+                </td>
+                <td data-name="退貨原因：">
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td data-name="勾選：">
+                    <label for="rtnCheck_02">
+                        <div>
+                            <input type="checkbox" id="rtnCheck_02">
+                            <span>✓</span>
+                        </div>       
+                    </label>        
+                </td>
+                <td data-name="商品編號：">#A123456789</td>
+                <td data-name="商品名稱：">泡泡袖十字前交叉提花歐根紗洋裝</td>
+                <td data-name="訂購數量：">2</td>
+                <td data-name="退貨數量：">
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </td>
+                <td data-name="退貨原因：">
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td data-name="勾選：">
+                    <label for="rtnCheck_03">
+                        <div>
+                            <input type="checkbox" id="rtnCheck_03">
+                            <span>✓</span>
+                        </div>       
+                    </label>        
+                </td>
+                <td data-name="商品編號：">#A123456789</td>
+                <td data-name="商品名稱：">泡泡袖十字前交叉提花歐根紗洋裝</td>
+                <td data-name="訂購數量：">5</td>
+                <td data-name="退貨數量：">
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td data-name="退貨原因：">
+                    <input type="text">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ===== rtnDesc (退換貨說明) start ===== -->
+    <div class="rtnDesc">
+        <ul>
+            <li>退貨與退訂商品，在確認商品相關單據與外觀狀態無誤後，信用卡付款者均會以刷退方式退還款項給您。</li>
+            <li>隨商品附之配件、贈品等，請與商品退貨時須一併隨商品退回。</li>
+            <li>除瑕疵商品外，退回的商品必須是其包裝未拆封(包含但不限於商品運送用之外包裝、瓶蓋、封口、封膜等接觸商品內容之包裝部分)。</li>
+            <li>若商品以非全新狀態(如外觀有刮傷、破損、受潮等)或欠缺完整包裝和內容(包含包裝、原廠外盒、保護袋、商品、附件、隨或文件、贈品等)，均會影響您退貨退款的權力。</li>
+            <li>商品因消費者個人拆卸使用等人為因素，造成故障、損毀、磨損、擦傷、刮傷、髒汙、包裝破損不完整等，或其他致使商品難以再行銷售之情形，均將影響您退換貨或退款的權利。</li>
+            <li>若您符合依法享有契約解除權之情形，本公司仍得請求您支付恢復該商品原狀之費用。</li>
+        </ul>
+    </div>
+
+    <!-- ===== rtnBtn start ===== -->
+    <div class="rtnBtn">
+        <div>
+            <label for="haveRead">
+                <div>
+                    <input type="checkbox" id="haveRead">
+                    <span>✓</span>
+                </div>   
+            </label> 
+            <p>我已詳細閱讀並同意上述契約並願意遵守規定</p>     
+        </div>
+        <button>SUBMIT</button>
+    </div>
+
+    <!-- ===== rtnBtn (申請送出視窗) start ===== -->
+    <div class="rtnDialog">
+        <div class="rtnCnt"> 
+            <div>
+                <p>退換貨申請已送出</p>      
+                <ul>
+                    <li>訂單編號：CWT0000001900</li>
+                    <li>我們已收到您的申請，將由客服與您聯繫</li>
+                </ul>  
+            </div>
+            
+            <button>回到會員專區</button>     
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 麵包削
+    $('.crumbs').addClass('on')
+    crumbs('會員中心')
+    crumbs('申請退換貨') 
+    $('.crumbs li').click(function(){  chCrumb( $(this).find('span').text())})
+
+
+    $('.rtnBtn button').click(function(){
+        $('.rtnDialog').addClass('on')
+    })
+    $('.rtnDialog button').click(function(){
+        mainInclude('page/member.html')
+    })
+
+
+
+</script>

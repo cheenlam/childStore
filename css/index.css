@@ -1,0 +1,892 @@
+body {
+    font: 13px/18px "Open Sans", "Helvetica Neue", "Helvetica", "STHeitiTC-Light", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Arial", "sans-serif";
+    background-image: url(../img/body_bg.jpg);
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: 0 0 10px #b8d3fc inset;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(0deg,#3493fb ,#b8d3fc,#3493fb );
+}
+
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* ===== header start ===== */
+.header{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 10px 0;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* hd_top start */
+.hd_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hd_logo{
+    width: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hd_tool ul{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.hd_tool li{
+    width: 60px;
+    padding:8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hd_tool img{
+    transition: 0.5s;
+}
+
+.hd_bag{
+    position: relative;
+}
+
+.hd_bag span{
+    color: #C79F62;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'CloudCalligraphy';
+    position: absolute;
+    top: 0;
+    left: 45px;
+}
+
+.hd_tool input{
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    color: #8f7f6c;
+    border: 2px dashed #c6b198;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+}
+
+.hd_tool input::-webkit-input-placeholder{
+    letter-spacing: 1.5px;
+    color: #c6b198;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'CloudCalligraphy';
+}
+
+.hd_menuBar{
+    display: none;
+}
+
+/* hd_menu start */
+.hd_menu{
+    padding-top: 20px;
+}
+
+.hd_menu ul{
+    width: 100%;
+    display: flex;
+}
+
+.hd_menu li{
+    width: calc(100% / 6);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px dashed #c6b198;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hd_menu li:first-child{
+    border-left: 2px dashed #c6b198;
+}
+
+.hd_menuImg{
+    width: 100%;
+    max-width: 80px;
+}
+
+.hd_menu li:nth-child(1):hover .hd_menuImg{
+    animation: shake 2s infinite linear;
+}
+
+.hd_menu li:nth-child(2):hover .hd_menuImg{
+    animation: tada 1.5s infinite linear;
+}
+
+.hd_menu li:nth-child(3):hover .hd_menuImg{
+    animation: zoom 1s infinite linear;
+}
+
+.hd_menu li:nth-child(4):hover .hd_menuImg{
+    animation: swing 1s infinite linear;
+}
+
+.hd_menu li:nth-child(5):hover .hd_menuImg{
+    animation: bounce 1s infinite linear;
+}
+.hd_menu li:nth-child(6):hover .hd_menuImg{
+    animation: jello 1.5s infinite linear;
+}
+
+.hd_menu span{
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #F2A6A9;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'CloudCalligraphy';
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+.hd_menu span::before{
+    content: attr(data-menu);
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'CloudCalligraphy';
+    color: #C79F62;
+}
+
+/* ===== content start ===== */
+.content{
+    width: 100%;
+    min-height: calc(100% - 695px);
+}
+
+
+/* ===== footer start ===== */
+.footer{
+    position: relative;
+}
+.ft_topBg{
+    width: 100%;
+    height: 100px;
+    background: url(../img/ft_bg.png) repeat-x center bottom/contain;
+}
+
+.ft_cnt{
+    width: 100%;
+    padding: 20px 10px;
+    background-color:  #d1e3b0;
+}
+
+.ft_top{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ft_link{
+    display: flex;    
+}
+.ft_link>div+div{
+    margin-left: 10px;
+}
+
+.ft_link p,
+.ft_link li{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ft_link p{
+    padding: 0 20px 10px;
+    font-size: 15px; 
+    font-family: 'CloudCalligraphy';
+    text-transform: uppercase;
+    color: #6a648c; 
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
+}
+
+.ft_link li{
+    font-size: 10px;
+    padding: 5px 20px; 
+    border-radius: 20px 10px 20px 10px;
+    color: #C79F62; 
+}
+
+.ft_link li+li{
+    margin-top: 3px;
+}
+
+.ft_link span{
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 50%;  
+    font-size: 10px;
+    box-shadow: 2px 2px 4px #b8a288;
+    color: #6a648c;
+}
+
+.ft_hover{
+    transition: 0.5s;
+}
+
+.ft_logo{
+    width: 150px;
+}
+
+.ft_bottom{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright{
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #9e8053;
+    font-family: 'CloudCalligraphy';
+}
+.copyright span{
+    font-weight: bold;
+    color: #6a648c;
+}
+
+.ft_forum ul{
+    display: flex;
+}
+.ft_forum li{
+    width: 45px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.5s;
+    
+}
+
+.ft_forum li+li{
+    margin-left: 10px;
+}
+
+.ft_speak{
+    width: 90px;
+    position: absolute;
+    top: -46px;
+    left: -16px;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.ft_paper p{
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #6a648c; 
+}
+
+.ft_paper>div{
+    width: 300px;
+    height: 35px;
+    padding-left: 15px;
+    padding-right: 90px;
+    display: flex;
+    background-color: #74b37427;
+    box-shadow: 2px 2px 2px #b8a288 inset;
+    border-radius: 20px 10px 20px 10px;
+    position: relative;
+}
+
+.ft_paper input{
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    background-color: transparent;
+    color: #9e8053;  
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.ft_paper input::-webkit-input-placeholder{
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #999;
+    font-family: 'CloudCalligraphy';
+}
+
+.ft_paper button{
+    height: 100%;
+    padding: 0 10px;
+    font-size: 10px;
+    font-family: 'CloudCalligraphy';
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 2px #b8a288 ;
+    background-color: #83d883;
+    color: #9e8053;
+    border-radius: 20px 10px 20px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+
+/* ===== goTop start (至頂彈窗) ===== */
+.goTop{
+    width: 80px;
+    position: fixed;
+    bottom: 70px;
+    right: 5px;
+    cursor: pointer;
+    transform: translateX(200%);
+    transition: 0.3s;
+}
+
+.goTop.on{
+    transform: translateX(0%);
+}
+
+.goTop>img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.goTop img[data-number="1"]{
+    transform: rotateX(90deg);
+    transform-origin: bottom center; 
+}
+
+.goTop.on>img[data-number="1"]{
+    animation: goTop 1.3s 0.3s forwards;
+}
+
+.goTop_title{
+    width: 50px;
+    position: absolute;
+    top: -75px;
+    left: -20px;
+    opacity: 0; 
+}
+
+.goTop.on .goTop_title{
+    opacity: 1;
+    transition: 0.1s 1.5s;
+}
+
+/* ===== myCar start (購物車彈窗) ===== */
+.myCar{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1; 
+}
+
+.myCar.on{
+    opacity: 1;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.myCar_close{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.myCar_cnt{
+    width: 100%;
+    max-width: 500px;
+    max-height: 80%;
+    padding: 40px 0 20px 15px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.myCar_cnt>span {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myCar_bg{
+    width: 100px;
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    z-index: 1;
+    animation: swing 1.5s infinite linear;
+}
+
+.myCar_msg{
+    height: 100%;
+}
+
+.myCar_msg h5 {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase; 
+    font-size: 16px;
+    font-weight: bold;
+    color: #81688c;
+    border-bottom: 1px solid #ddd;
+}
+
+.myCar_msg h5 tt{
+    padding-right: 10px;
+    font-family: 'CloudCalligraphy'; 
+    letter-spacing: 1px;
+    color: #90c2f3;
+}
+
+.myCar_msg ul {
+    height: calc(100% - 150px);
+    padding-right: 15px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+.myCar_msg ul::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: 0 0 10px #b8d3fc inset;
+}
+
+.myCar_msg ul::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(0deg,#3493fb ,#b8d3fc,#3493fb );
+}
+
+
+.myCar_msg li {
+    padding: 15px 0 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.myCar_msg li>div:first-child {
+    display: flex;
+}
+
+.myCar_img {
+    width: 60px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.myCar_img span {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #83521ed0;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.myCat_title {
+    padding: 0 15px;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.myCat_title span{
+    font-size: 14px;
+    font-family: 'CloudCalligraphy'; 
+    letter-spacing: 1.5px;
+    color: #90c2f3;
+}
+
+.myCat_title p{
+    color: #81688c;
+}
+
+.myCat_total tt,
+.myCat_title tt {
+    font-size: 12px;
+    font-weight: normal;
+    position: relative;
+    color: #999;
+}
+
+.myCat_total tt::before,
+.myCat_title tt:last-child::before {
+    content: 'NT$ ';
+    font-size: 12px;
+    font-family: 'CloudCalligraphy';
+}
+
+.myCat_title tt+tt {
+    padding-left: 10px;
+    position: relative;
+}
+
+.myCat_title tt+tt::after {
+    content: '|';
+    position: absolute;
+    left: 0;
+}
+
+.myCat_total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.myCat_total tt {
+    font-size: 18px;
+    color: #83521e;
+}
+
+.myCat_total span {
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.myCar_btn {
+    padding-right: 15px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.myCar_btn button {
+    width: 70%;
+    height: 40px;
+    border: 2px solid #81688c;
+    outline: none;  
+    font-family: 'CloudCalligraphy';
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #81688c;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: .3s linear;
+}
+
+.myCar_btn button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #90c2f3;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: .3s linear;
+}
+
+/* ========== hover & active 各別設定 ========== */
+/* header */
+@media (any-hover: hover){
+    .hd_logo:hover{opacity: 0.6;}
+    .hd_tool li:hover{
+        background-color: #c59b6d25;
+        box-shadow: 2px 2px 4px #c6b198;
+    }
+    .hd_tool li:hover img{transform: scale(1.1);} 
+    .hd_menu li:hover{background-color: #c59b6d25;}
+}
+
+.hd_logo:active{opacity: 0.6;}
+.hd_tool li:active{
+    background-color: #c59b6d25;
+    box-shadow: 2px 2px 4px #c6b198;
+}
+.hd_tool li:active img{transform: scale(1.1);}
+.hd_menu li:active{background-color: #c59b6d25;}
+
+/* footer */
+.ft_forum li:hover .ft_speak{
+    opacity: 1;
+}
+.ft_forum li:hover{
+    opacity: 1;
+} 
+
+@media (any-hover: hover){
+    .ft_hover:hover{
+        box-shadow: 2px 2px 2px #b8a288 inset;
+        background-color: #74b37427;
+        color: #9e8053;
+        cursor: pointer;
+    }  
+}
+
+.ft_hover:active{
+    box-shadow: 2px 2px 2px #b8a288 inset;
+    background-color: #74b37427;
+    color: #9e8053;
+    cursor: pointer;
+}
+
+.ft_paper button:active{
+    box-shadow: 2px 2px 2px #32663249 inset;
+    background-color: #56b85627;
+}
+
+/* goTop  */
+@media (any-hover: hover){
+    .goTop:hover>img[data-number="1"]{
+        animation: bounce 1s infinite linear;
+    }
+}
+
+/* myCar */
+@media (any-hover: hover){
+    .myCat_total span:hover,
+    .myCar_cnt>span:hover{color: #666;}
+    .myCar_btn button:hover{
+        background-color: #90c2f3;
+        color: #fff;
+    } 
+    .myCar_btn button:hover::before{
+        border: 2px solid transparent;
+    }
+}
+.myCat_total span:active,
+.myCar_cnt>span:active{color: #666;}
+.myCar_btn button:active{
+    border: 2px solid #90c2f3;
+    background-color: #90c2f3;
+    color: #fff;
+} 
+.myCar_btn button:active::before{
+    display: none;
+}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 900px){
+    .ft_top,
+    .ft_bottom{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .ft_logo{
+        margin-bottom: 40px;
+    }
+
+    .ft_link{
+        flex-direction: column;
+    }
+
+    .ft_link>div{
+        padding: 10px 0 3px;
+    }
+
+    .ft_link>div+div{
+        margin-left: 0;
+        border-top: 2px dashed #c6b198;
+    }
+
+    .ft_link ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ft_link li{
+       margin-bottom: 2px;
+    }
+    .ft_link li+li{
+        margin-top: 0;
+    }
+    
+    .ft_paper{
+        padding-bottom: 60px;
+    }
+
+    .ft_paper,
+    .ft_paper>div{
+        width: 100%;
+    }
+
+    .ft_forum{
+        margin-bottom: 20px;
+    }
+
+    .goTop{
+        bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .hd_top{
+        flex-direction: column;
+    }
+    .hd_tool{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hd_menuBar{
+        display: block;
+    }
+
+    .hd_menu{
+        height: 0;
+        transform: rotateX(90deg);
+        transform-origin: top center;    
+    }
+
+    .hd_menu.on{
+        height: unset;
+        transform: rotateX(0deg);
+        transition: 0.5s;
+    }
+
+    .hd_menu ul{
+        flex-direction: column;
+    }
+
+    .hd_menu li{
+        width: 100%;
+        padding: 5px;
+        flex-direction: row;
+        border-right: none;
+    }
+
+    .hd_menu li+li{
+        border-top: 2px dashed #c6b198;
+    }
+
+    .hd_menu li:first-child{    
+        border-left: none;
+    }
+
+    .hd_menu span{
+        width: unset;
+        padding-left: 20px;
+    }
+    .hd_menuImg{
+        max-width: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .myCar{
+        opacity: unset;
+        transform: translateX(-100%);
+    }
+    .myCar.on{
+        transform: translateX(0%);
+    }
+
+    .myCar_bg,
+    .myCar_cnt>span{
+        display: none;
+    }
+    .myCar_close::before,
+    .myCar_close::after{
+        width: 35px;
+        height: 65px;
+        margin: auto;
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .myCar_close::before{
+        content: '';
+        border-radius: 5px 0 0 5px;
+        background-color: #000;
+    }
+    .myCar_close::after{
+        content: '\00ab';
+        transform: rotate(0deg);
+    }
+
+    .myCar_cnt {
+        width: 80%;
+        min-width: 250px;
+        height: 100%;
+        max-height: 100%;
+        border-radius: unset;
+        right: unset;
+    }
+
+    .myCar_cnt ul {
+        max-height: calc(100% - 160px);
+    }
+    .myCar_cnt li {
+        flex-direction: column;
+    }
+    .myCar_cnt li>div:first-child {
+        align-items: center;
+    }
+
+    .myCat_total{
+        padding-top: 10px;
+        flex-direction: row;
+    }
+
+    .myCar_btn button{
+        width: 100%
+    }
+}
+
+
+

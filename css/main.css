@@ -1,0 +1,102 @@
+.mainBox{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* ===== main_carousel start (輪播) ===== */
+.main_carousel{
+    padding: 5px;  
+    margin-bottom: 50px;
+    background-image: url(../img/carousel_bg.jpg);
+}
+
+/* ===== newShow start (新品上架展示) ===== */
+.newShow{
+    padding: 10px;
+    margin: 20px 0 100px;
+    position: relative;
+}
+
+.newShow_title{
+    width: 150px;
+    margin: 0 auto 20px;
+}
+
+.newShow_title img[data-number="2"]{
+    display: none;
+}
+
+/* ===== sortShow start (分類展示: 穿搭單品、玩樂空間、童趣雜貨) ===== */
+.sortShow {
+    padding: 10px;
+    margin: 20px 0 100px;
+}
+
+.sortSelect{
+    margin-bottom: 20px;
+}
+
+.sortSelect ul{
+    display: flex;
+    justify-content: center;
+}
+
+.sortSelect li{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sortSelect_img{
+    width: 150px;  
+}
+
+.sortSelect_img img[data-number="2"]{
+    display: none;
+}
+
+
+/* ========== hover & active 各別設定 ========== */
+/* sortShow */
+@media (any-hover: hover){
+    .sortSelect li:hover{opacity: 0.8;}
+}
+.sortSelect li:active{
+    transform: scale(1.05);
+}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 500px) {
+    .newShow_title img[data-number="1"],
+    .sortSelect_img img[data-number="1"]{
+        display: none;
+    }
+    .newShow_title img[data-number="2"],
+    .sortSelect_img img[data-number="2"]{
+        display: block;
+    }
+
+    .newShow_title{
+        max-width: 100px;
+    }
+        
+    .sortSelect li{
+        padding: 0 10px;
+        text-align: center;
+    }
+    .sortSelect li::before{
+        content: attr(data-name);
+        font-family: 'cute';
+        font-size: 18px;
+        color: #2b5b47;
+    }
+
+    .sortSelect_img{
+        width: unset;
+        max-width: 100px;
+    }
+}

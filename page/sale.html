@@ -1,0 +1,794 @@
+<link rel="stylesheet" href="../css/sale.css">
+<!-- =======================================-->
+
+<div class="saleBox">
+    <!-- ===== sortMenu_btn (sortMenu開啟按鈕) start =====   -->
+    <div class="sortMenu_btn">
+        <button>select list</button>
+    </div>
+
+    <div class="saleCnt">
+        <!-- ===== sortMenu start ===== -->
+        <div class="sortMenu">
+            <div class="sortMenu_close"></div>
+
+            <div class="sortMenu_cnt">
+                <!-- sortAct (商品分類 - 熱門活動) -->
+                <div class="sortAct">
+                    <div class="sortMenu_title">
+                        <img src="../img/hdMenu_activity.png">
+                        <h5>熱門活動<tt>activity</tt></h5>
+                    </div>
+
+                    <ul>
+                        <li>限時24H．任選249</li>
+                        <li>夏日精選．3件588</li>
+                        <li>零碼出清．99元起</li>
+                        <li>人氣大賞．2件8折</li>
+                        <li>驚喜特價．任選299</li>
+                        <li>春季換新．限時特價</li>
+                    </ul>
+                </div>
+
+                <!-- sortMore (商品分類 - 類型選擇) -->
+                <div class="sortMore">
+                    <div class="sortMenu_title">
+                        <img src="../img/hdMenu_outfit.png">
+                        <h5>穿搭單品<tt>outfit</tt></h5>
+                    </div>
+
+                    <div class="sortMore_btn">
+                        <button>清除所有 (<span>0</span>)</button>
+                    </div>
+
+                    <ul>
+                        <li class="on">
+                            <div class="sortMore_title">
+                                <h6>性別</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+                            <div class="sortMore_list">
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>男童</span>
+                        </label>
+
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>女童</span>
+                        </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sortMore_title">
+                                <h6>年齡區間</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+                            <div class="sortMore_list">
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>0-3 Y</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>4-6 Y</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>7-9 Y</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>10-12 Y</span>
+                        </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sortMore_title">
+                                <h6>上衣類型</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+                            <div class="sortMore_list">
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>短袖上衣</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>長袖上衣</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>連身/包屁衣</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>外套</span>
+                        </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sortMore_title">
+                                <h6>下身類型</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+                            <div class="sortMore_list">
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>短褲</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>長褲</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>內搭褲</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>裙子</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>洋裝</span>
+                        </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sortMore_title">
+                                <h6>家居類型</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+                            <div class="sortMore_list">
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>家居套裝</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>家居服</span>
+                        </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sortMore_title">
+                                <h6>配件類型</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+                            <div class="sortMore_list">
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>圍兜</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>包巾</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>防踢背心</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>鞋類</span>
+                        </label>
+                                <label>
+                            <input type="checkBox">
+                            <div>✓</div>
+                            <span>襪子系列</span>
+                        </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- sortMark (商品分類 - 品牌選擇) -->
+                <div class="sortMark">
+                    <div class="sortMenu_title">
+                        <img src="../img/hdMenu_outfit.png">
+                        <h5>品牌列表<tt>brand list</tt></h5>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <label>          
+                        <div class="sortMark_img">
+                            <img src="../img/markLogo_01.png">
+                        </div>
+                        <input type="checkBox">
+                        <div>✓</div>
+                    </label>
+                        </li>
+                        <li>
+                            <label>            
+                        <div class="sortMark_img">
+                            <img src="../img/markLogo_02.png">
+                        </div>
+                        <input type="checkBox">
+                        <div>✓</div>
+                    </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== saleRight start ===== -->
+        <div class="saleRight">
+            <!-- ===== saleTop start ===== -->
+            <div class="saleTop">
+                <!-- saleTop_L start -->
+                <div class="saleTop_L">
+                    <div class="saleimgCnt" id="saleimgCnt">
+                        <img src="../img/showImg_01.jpg" />
+                        <span class="zoom" id="saleRoom"></span>
+                        <span class="icon-search"></span>
+                        <div class="zoomShow" id="zoomshow">
+                            <img src="../img/showImg_01.jpg" id="zoomshow_img" />
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li class="on">
+                            <div><img src="../img/showImg_01.jpg"></div>
+                        </li>
+                        <li>
+                            <div><img src="../img/showImg_101.jpg"></div>
+                        </li>
+                        <li>
+                            <div><img src="../img/showImg_102.jpg"></div>
+                        </li>
+                        <li>
+                            <div><img src="../img/showImg_103.jpg"></div>
+                        </li>
+                        <li>
+                            <div><img src="../img/showImg_104.jpg"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- saleTop_R start -->
+                <div class="saleTop_R">
+                    <h4>#A123456789</h4>
+                    <h5>泡泡袖十字前交叉提花歐根紗洋裝</h5>
+                    <div class="price">
+                        <p class="price_new">1220</p>
+                        <p class="price_disc">1015</p>
+                        <span class="icon-heart"></span>
+                    </div>
+
+                    <!-- sale_color start -->
+                    <div class="sale_color">
+                        <p>
+                            Color :
+                            <span>白</span>
+                        </p>
+                        <ul>
+                            <li class="on">
+                                <!-- add class ==>on  -->
+                                <label for="cor1">
+                    <div class="colorCard" style="background-color: #fff" title="白"></div>
+                    <input type="radio" name="color" id="cor1" />
+                  </label>
+                            </li>
+                            <li>
+                                <!-- add class ==>on  -->
+                                <label for="cor2">
+                    <div class="colorCard" style="background-color: #000" title="黑"></div>
+                    <input type="radio" name="color" id="cor2" />
+                  </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- sale_size start -->
+                    <div class="sale_size">
+                        <p>
+                            Size :
+                            <span>S</span>
+                        </p>
+                        <ul>
+                            <li class="on">
+                                <!-- add class ==>on  -->
+                                <label for="size1">
+                    <div class="sizeCard" title="S">S</div>
+                    <input type="radio" name="size" id="size1" />
+                  </label>
+                            </li>
+                            <li>
+                                <!-- add class ==>on  -->
+                                <label for="size2">
+                    <div class="sizeCard" title="M">M</div>
+                    <input type="radio" name="size" id="size2" />
+                  </label>
+                            </li>
+                            <li>
+                                <!-- add class ==>on  -->
+                                <label for="size3">
+                    <div class="sizeCard" title="L">L</div>
+                    <input type="radio" name="size" id="size3" />
+                  </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- sale_count start -->
+                    <div class="sale_count">
+                        <ul>
+                            <li>
+                                <div class="sale_number">
+                                    <div class="countLess on">-</div>
+                                    <!-- add class ==>on  -->
+                                    <input type="number" value="1" min="1" max="10" disabled />
+                                    <div class="countPlus">+</div>
+                                    <!-- add class ==>on  -->
+                                </div>
+                            </li>
+                            <li>
+                                <button>加入購物車</button>
+                            </li>
+                        </ul>
+                        <span>預購商品：預計 15 個工作天出貨</span>
+                    </div>
+
+                    <!-- msgGroup start -->
+                    <div class="msgGroup">
+                        <!-- 付款與運送 -->
+                        <div>
+                            <div class="msgTitle on">
+                                <!-- add class ==>on  -->
+                                <h6>
+                                    付款與運送
+                                    <span class="icon-truck"></span>
+                                </h6>
+                                <p>宅配滿NT$3,000免運</p>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+
+                            <div class="msgCount">
+                                <span>付款方式</span>
+                                <ul>
+                                    <li>信用卡刷卡</li>
+                                    <li>銀行臨櫃存匯款</li>
+                                    <li>ATM存匯款</li>
+                                    <li>超商貨到付款</li>
+                                </ul>
+
+                                <span>運送方式</span>
+                                <ul>
+                                    <li>宅配，每筆NT$80，滿NT$3,000(含以上)免運費</li>
+                                    <li>付款後門市自取，免運費</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 商品描述 -->
+                        <div>
+                            <div class="msgTitle">
+                                <!-- add class ==>on  -->
+                                <h6>商品描述</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+
+                            <div class="msgCount">
+                                <span>商品編號</span>
+                                <ul>
+                                    <li>4798608</li>
+                                </ul>
+
+                                <span>商品特色</span>
+                                <ul>
+                                    <li>素材產地：中國</li>
+                                    <li>加工產地：中國</li>
+                                    <li>顏色：白、黑</li>
+                                    <li>尺寸：S、M、L</li>
+                                    <li>厚度：薄</li>
+                                    <li>透光度：透</li>
+                                    <li>材質：蕾絲網紗</li>
+                                </ul>
+
+                                <span>銷售重點</span>
+                                <ul>
+                                    <li>賣場商品尺寸皆以平放單面公分標示，但每個人的測量方式，擺放位置及材質彈性的影響，加上每批製作上的誤差，或多或少會有不同，尺寸差距正負3cm以內為國際認定合理範圍喔。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 尺寸指南 -->
+                        <div id="guide">
+                            <div class="msgTitle">
+                                <h6>尺寸指南</h6>
+                            </div>
+                        </div>
+                        <!-- 注意事項 -->
+                        <div class="noteMsg">
+                            <div class="msgTitle">
+                                <!-- add class ==>on  -->
+                                <h6>注意事項</h6>
+                                <span class="icon-cheveron-down"></span>
+                            </div>
+
+                            <div class="msgCount">
+                                <span>洗滌方式</span>
+                                <ul>
+                                    <li>深淺色請分開洗滌。</li>
+                                    <li>請放入細網洗衣袋中弱速水洗，以保持商品型態。</li>
+                                    <li>洗滌時，水溫請低於30℃；請使用中性洗劑；請勿長時間浸泡。</li>
+                                    <li>請勿使用漂白劑、螢光增白劑及衣物柔軟劑，以免破壞布料。</li>
+                                    <li>不可濕放，以免衣物染色；請弱速輕脫水，不可烘乾，以免衣物縮水。</li>
+                                    <li>如需整燙，請以低溫墊布熨燙。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== saleDemo start ===== -->
+            <!-- 文字編輯器區塊 -->
+            <div class="saleDemo">
+                <img src="../img/showbg.jpg">
+                <img src="../img/showbg.jpg">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ===== guideBox start  ===== -->
+<div class="guideBox">
+    <div class="guideClose"></div>
+    <div class="guideCnt">
+        <span class="icon-close-outline"></span>
+        <h2>Size Guide</h2>
+
+        <div>
+            <!-- 尺寸表 -->
+            <div class="guideTitle on">
+                <!-- add class ==>on  -->
+                <h5>尺寸表</h5>
+                <span class="icon-cheveron-down"></span>
+            </div>
+            <div class="guideMsg">
+                <table>
+                    <tr>
+                        <th>尺寸</th>
+                        <th>腰圍</th>
+                        <th>臀圍</th>
+                        <th>前檔</th>
+                        <th>後檔</th>
+                        <th>大腿圍</th>
+                        <th>褲口寬</th>
+                        <th>褲長</th>
+                        <th>重量(g)</th>
+                    </tr>
+                    <tr>
+                        <td data-title="尺寸">S</td>
+                        <td data-title="腰圍">32</td>
+                        <td data-title="臀圍">48</td>
+                        <td data-title="前檔">30</td>
+                        <td data-title="後檔">40</td>
+                        <td data-title="大腿圍">32</td>
+                        <td data-title="褲口寬">30</td>
+                        <td data-title="褲長">46</td>
+                        <td data-title="重量(g)">263</td>
+                    </tr>
+                    <tr>
+                        <td data-title="尺寸">M</td>
+                        <td data-title="腰圍">34.5</td>
+                        <td data-title="臀圍">50.5</td>
+                        <td data-title="前檔">31</td>
+                        <td data-title="後檔">41</td>
+                        <td data-title="大腿圍">33.25</td>
+                        <td data-title="褲口寬">31</td>
+                        <td data-title="褲長">47.5</td>
+                        <td data-title="重量(g)">263</td>
+                    </tr>
+                    <tr>
+                        <td data-title="尺寸">L</td>
+                        <td data-title="腰圍">37</td>
+                        <td data-title="臀圍">53</td>
+                        <td data-title="前檔">32</td>
+                        <td data-title="後檔">42</td>
+                        <td data-title="大腿圍">34.5</td>
+                        <td data-title="褲口寬">32</td>
+                        <td data-title="褲長">49</td>
+                        <td data-title="重量(g)">263</td>
+                    </tr>
+                </table>
+
+                <div class="guideNote">
+                    <span>單位: CM</span>
+                    <p>※ 本尺寸表會因布料彈性、水洗處理、測量起訖點、人為拉扯等因素，與實際商品尺寸略有誤差，誤差尺寸±2cm，在國際驗貨標準範圍都是屬於可接受範圍，並不屬於瑕疵。</p>
+                </div>
+
+                <div class="sizeImg">
+                    <img src="../img/sizeGuide_01.jpg">
+                </div>
+            </div>
+
+            <!-- 試穿報告 -->
+            <div class="guideTitle on">
+                <!-- add class ==>on  -->
+                <h5>試穿報告</h5>
+                <span class="icon-cheveron-down"></span>
+            </div>
+            <div class="guideMsg">
+                <table>
+                    <tr>
+                        <th>試穿人員</th>
+                        <th>身高</th>
+                        <th>體重(kg)</th>
+                        <th>肩寬</th>
+                        <th>上胸圍</th>
+                        <th>下胸圍</th>
+                        <th>腰圍</th>
+                        <th>下腰圍</th>
+                        <th>臀圍</th>
+                        <th>內衣罩杯</th>
+                        <th>尺寸</th>
+                    </tr>
+                    <tr>
+                        <td data-title="試穿人員">A</td>
+                        <td data-title="身高">156</td>
+                        <td data-title="體重(kg)">44</td>
+                        <td data-title="肩寬">34</td>
+                        <td data-title="上胸圍">80</td>
+                        <td data-title="下胸圍">67</td>
+                        <td data-title="腰圍">62</td>
+                        <td data-title="下腰圍">72</td>
+                        <td data-title="臀圍">84</td>
+                        <td data-title="內衣罩杯">70B</td>
+                        <td data-title="尺寸">S</td>
+                    </tr>
+                    <tr>
+                        <td data-title="試穿人員">B</td>
+                        <td data-title="身高">160</td>
+                        <td data-title="體重(kg)">62</td>
+                        <td data-title="肩寬">36.5</td>
+                        <td data-title="上胸圍">88</td>
+                        <td data-title="下胸圍">74</td>
+                        <td data-title="腰圍">68</td>
+                        <td data-title="下腰圍">83</td>
+                        <td data-title="臀圍">98</td>
+                        <td data-title="內衣罩杯">75C</td>
+                        <td data-title="尺寸">L</td>
+                    </tr>
+                    <tr>
+                        <td data-title="試穿人員">C</td>
+                        <td data-title="身高">160</td>
+                        <td data-title="體重(kg)">51</td>
+                        <td data-title="肩寬">36</td>
+                        <td data-title="上胸圍">88</td>
+                        <td data-title="下胸圍">74</td>
+                        <td data-title="腰圍">68</td>
+                        <td data-title="下腰圍">83</td>
+                        <td data-title="臀圍">90</td>
+                        <td data-title="內衣罩杯">75C~D</td>
+                        <td data-title="尺寸">S</td>
+                    </tr>
+                    <tr>
+                        <td data-title="試穿人員">D</td>
+                        <td data-title="身高">163</td>
+                        <td data-title="體重(kg)">58</td>
+                        <td data-title="肩寬">35.5</td>
+                        <td data-title="上胸圍">87</td>
+                        <td data-title="下胸圍">74</td>
+                        <td data-title="腰圍">71</td>
+                        <td data-title="下腰圍">88</td>
+                        <td data-title="臀圍">98</td>
+                        <td data-title="內衣罩杯">75B</td>
+                        <td data-title="尺寸">M</td>
+                    </tr>
+                </table>
+                <div class="guideNote">
+                    <span>單位: CM</span>
+                    <p>※ 每個人身高體重和商品尺寸不盡相同，身高155cm與180cm身材有可能選擇同樣尺寸的商品；胸圍尺寸的大小會影響選擇的尺寸，建議可以看試穿人員的胸圍做選擇參考。若您屬於肩膀較寬的體型，建議您參考胸圍後再對照肩寬數據。</p>
+                </div>
+
+                <div class="sizeImg">
+                    <img src="../img/sizeGuide_02.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 麵包削
+    $('.crumbs').addClass('on')
+    crumbs('穿搭單品')
+    crumbs('長袖上衣')
+    $('.crumbs li').click(function() {
+        chCrumb($(this).find('span').text())
+    })
+
+
+    // 商品展示圖變換
+    $('.saleTop_L li').click(function() {
+        $('.saleTop_L li').removeClass('on')
+        $(this).addClass('on')
+        var find = $(this).find('img').attr('src')
+        $('.saleimgCnt img').attr('src', find)
+    })
+
+    // 商品顏色選擇
+    $('.sale_color li').click(function() {
+        $('.sale_color li').removeClass('on')
+        $(this).addClass('on')
+        $('.sale_color span').text($(this).find('div').attr('title'))
+
+    })
+
+    // 商品尺寸選擇
+    $('.sale_size li').click(function() {
+        $('.sale_size li').removeClass('on')
+        $(this).addClass('on')
+        $('.sale_size span').text($(this).find('div').attr('title'))
+    })
+
+    // 購物數量增減
+    var saleCount;
+    $('.countPlus').click(function() {
+        saleCount = $(this).siblings('input').val()
+        if (saleCount < 10) {
+            $(this).siblings('input').val(++saleCount)
+            situation()
+        }
+    })
+
+    $('.countLess').click(function() {
+        saleCount = $(this).siblings('input').val()
+        if (saleCount > 1) {
+            $(this).siblings('input').val(--saleCount)
+            situation()
+        }
+    })
+
+    function situation() {
+        switch (saleCount) {
+            case 1:
+                $('.countLess').addClass('on');
+                break;
+            case 10:
+                $('.countPlus').addClass('on');
+                break;
+            default:
+                $('.countLess,.countPlus').removeClass('on')
+        }
+    }
+
+
+
+    // 商品放大鏡
+    var saleimgCnt = document.getElementById('saleimgCnt');
+    var saleRoom = document.getElementById('saleRoom');
+    var zoomshow = document.getElementById('zoomshow');
+    var zoomshow_img = document.getElementById('zoomshow_img');
+    saleimgCnt.onmousemove = function(e) {
+        var ev = e || window.event;
+        var aLeft = parseInt(ev.clientX - 56) - saleimgCnt.offsetLeft - saleRoom.offsetWidth / 2;
+        var aTop = parseInt(ev.clientY - 350) - saleimgCnt.offsetTop - saleRoom.offsetHeight / 2;
+
+        if (aLeft < 0) {
+            aLeft = 0;
+        }
+        if (aLeft > saleimgCnt.offsetWidth - saleRoom.offsetWidth) {
+            aLeft = saleimgCnt.offsetWidth - saleRoom.offsetWidth
+        }
+        if (aTop < 0) aTop = 0;
+        if (aTop > saleimgCnt.offsetHeight - saleRoom.offsetHeight) {
+            aTop = saleimgCnt.offsetHeight - saleRoom.offsetHeight
+        }
+        saleRoom.style.left = aLeft + 'px';
+        saleRoom.style.top = aTop + 'px';
+
+        // 大圖顯示位置
+        var scaleX = aLeft / (saleimgCnt.offsetWidth - saleRoom.offsetWidth);
+        var scaleY = aTop / (saleimgCnt.offsetHeight - saleRoom.offsetHeight);
+        zoomshow_img.style.left = (zoomshow_img.offsetWidth - zoomshow.offsetWidth) * scaleX * (-1) + 'px';
+        zoomshow_img.style.top = (zoomshow_img.offsetHeight - zoomshow.offsetHeight) * scaleY * (-1) + 'px';
+    }
+
+
+    // 分類選擇清單切換展開
+    $('.sortMore li').click(function() {
+        $(this).toggleClass('on')
+
+        if ($(this).find('input:checked').length != 0) {
+            $(this).addClass('on')
+        }
+    })
+
+
+    // 判斷有幾個選項被勾選
+    $('.sortMore input,.sortMark input').click(function() {
+        nowCk()
+    })
+
+    $('.sortMore_btn button').click(function() {
+        $('.sortMore input').each(function() {
+            $(this).prop('checked', false)
+        });
+        $('.sortMark input').each(function() {
+            $(this).prop('checked', false)
+        });
+        nowCk();
+    })
+
+    function nowCk() {
+        var x = $('.sortMore input:checked').length + $('.sortMark input:checked').length
+        $('.sortMore_btn span').text(x)
+        if (x > 0) {
+            $('.sortMore_btn').css('display', 'block')
+        } else {
+            $('.sortMore_btn').css('display', 'none')
+        }
+    }
+
+    // 商品訊息內容展開
+    $('.msgTitle').click(function() {
+        $('.msgTitle').removeClass('on')
+        $(this).toggleClass('on')
+    })
+
+    $('.guideTitle').click(function() {
+        $(this).toggleClass('on')
+    })
+
+    // 尺寸指南視窗展開
+    $('#guide').click(function() {
+        $('.guideBox').addClass('on')
+    })
+    $('.guideCnt>span,.guideClose').click(function() {
+        $('.guideBox').removeClass('on')
+    })
+
+    // 商品分類選單展開
+    $('.sortMenu_btn button').click(function() {
+        $('.sortMenu').addClass('on')
+    })
+    $('.sortMenu_close').click(function() {
+        $('.sortMenu').removeClass('on')
+    })
+
+    // 卷軸滾動分類選單定位
+    var sortScroll = $(window).scroll(function() {
+        var x = $('.crumbs').offset().top + $('.crumbs').height() + 10
+        var y = $('.footer').offset().top - 900
+        var run = sortScroll.scrollTop() - x
+
+        if ($(document).width() > 1199) {
+            if (sortScroll.scrollTop() > x && sortScroll.scrollTop() < y) {
+                $('.sortMenu').css('top', run)
+            } else if (sortScroll.scrollTop() >= y) {
+                $('.sortMenu').css('top', 'unset').css('bottom', 100)
+            } else {
+                $('.sortMenu').css('top', 0).css('bottom', 'unset')
+            }
+        } else {
+            $('.sortMenu').css('top', 0).css('bottom', 'unset')
+        }
+    });
+</script>

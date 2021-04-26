@@ -1,0 +1,1324 @@
+/* ========== 特殊字形引入 ========== */
+@font-face {
+    font-family: "CloudCalligraphy";
+    src: url('../myfonts/Cloud-Calligraphy.ttf');
+}
+
+/* ========== 共用設定 ========== */
+/* 分隔線 */
+.hr_line{
+    width: 100%;
+    height: 60px;
+    background: url(../img/separate_line.png) repeat-x center;
+}
+
+/* 動畫 */
+@keyframes shake{
+    0%, 100%{transform: translateZ(0);}
+    10%, 30%, 50%, 70%, 90%{transform: translate3d(-5%,0,0);}
+    20%, 40%, 60%, 80%{transform: translate3d(5%,0,0);}
+}
+
+@keyframes tada{
+    0%, 100%{transform: scaleX(1);}
+    10%, 20%{transform: scale3d(.9,.9,.9) rotate(-3deg);}
+    30%, 50%, 70%, 90%{transform: scale3d(1.1,1.1,1.1) rotate(3deg);}
+    40%, 60%, 80%{transform: scale3d(1.1,1.1,1.1) rotate(-3deg);}
+}
+
+@keyframes jello{
+    0%, 11.1%, 100%{transform: translateZ(0)}
+    22.2%{transform: skewX(-12.5deg) skewY(-12.5deg);}
+    33.3%{transform: skewX(6.25deg) skewY(6.25deg);}
+    44.4%{transform: skewX(-3.125deg) skewY(-3.125deg);}
+    55.5%{transform: skewX(1.5625deg) skewY(1.5625deg);}
+    66.6%{transform: skewX(-.78125deg) skewY(-.78125deg)}
+    77.7%{transform: skewX(.390625deg) skewY(.390625deg);}
+    88.8%{transform: skewX(-.1953125deg) skewY(-.1953125deg);}
+}
+
+@keyframes zoom{
+    0%, 100%{transform: scale(1);}
+    50%{transform: scale3d(1.1,1.1,1.1);}
+}
+
+@keyframes swing{
+    0%, 50%, 100%{transform: rotate(0deg);}
+    25%{transform: rotate(4deg);}
+    75%{transform: rotate(-4deg);}
+}
+
+@keyframes bounce{
+    0%{transform: scaleX(1);}
+    30%{transform: scale3d(1.25,.75,1);}
+    40%{transform: scale3d(.75,1.25,1);}
+    50%{transform: scale3d(1.15,.85,1);}
+    65%{transform: scale3d(.95,1.05,1);}
+    75%{transform: scale3d(1.05,.95,1);}
+    100%{transform: scaleX(1);}
+}
+
+@keyframes goTop{
+    0%{transform: rotateX(90deg);}
+    30%{transform: scaleX(1);}
+    40%{transform: scale3d(1.25,.75,1);}
+    50%{transform: scale3d(.75,1.25,1);}
+    60%{transform: scale3d(1.15,.85,1);}
+    75%{transform: scale3d(.95,1.05,1);}
+    85%{transform: scale3d(1.05,.95,1);}
+    100%{transform: scaleX(1);}
+}
+
+/* 商品清單格 */
+.commList ul{
+    display: flex;
+    flex-wrap: wrap; 
+    position: relative; 
+}
+
+.commList li{
+    width: calc(100% / 4);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.commCard{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px; 
+    transition: 0.5s;
+}
+
+.commImg{
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.commImg img{
+    transition: 0.5s;
+}
+
+.commAdd,
+.commLike,
+.commDel {
+    width: 35px;
+    height: 35px;
+    line-height: 37px;
+    font-size: 15px;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 5px 0 #999;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.commAdd {
+    bottom: 50px;
+}
+
+.commLike,
+.commDel{
+    bottom: 10px;
+}
+
+.commTitle {
+    width: 100%;
+    padding: 20px 5px 0;
+    font-size: 10px;
+}
+
+.commTitle h4 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 13px;
+    color: #90c2f3;
+    font-family: 'CloudCalligraphy';
+}
+
+.commTitle h5 {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 22px;
+    padding-bottom: 10px;
+    color: #81688c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.commTitle .newPrice {
+    color: #ccc;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: line-through;
+    font-family: 'CloudCalligraphy';
+}
+
+.commTitle .discPrice {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #f00;
+    font-family: 'CloudCalligraphy';
+}
+
+.commTitle .newPrice::before,
+.commTitle .discPrice::before {
+    content: 'NT$ ';
+    font-size: 10px;
+}
+
+
+/* 商品清單格 (直向排列)  */
+.commList.on li {
+    width: 100%;
+    background-color: transparent;
+}
+
+.commList.on .commCard {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    border-radius: unset;
+    border-bottom: 1px dashed #c6b198;
+    background-color: transparent;
+}
+
+.commList.on .commImg {
+    width: 100px;
+    height: 100px;
+    padding-bottom: unset;
+    position: unset;
+    flex-shrink: 0;
+}
+
+.commList.on .commTitle {
+    min-width: calc(100% - 100px);
+    padding: 0;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.commList.on .commLike,
+.commList.on .commDel{
+    right: 10px;
+    bottom: 10px;
+    left: unset;
+}
+
+.commList.on .commAdd {
+    right: 55px;
+    bottom: 10px;
+    left: unset;
+}
+
+
+/* ===== orderMsg_cnt (訂單訊息 - 客戶資訊)===== */
+.orderMsg_cnt {
+    padding: 20px 0 100px;
+}
+
+.orderMsg_cnt ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orderMsg_cnt li {
+    width: calc(100% / 2);
+    padding: 10px;
+}
+
+.orderCard {
+    min-height: 250px;
+    border: 1px solid #ddba8e;
+}
+
+.orderCard .title {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ddba8e;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.orderCard .title span {
+    padding-right: 5px;
+}
+
+.orderCard ul {
+    padding-top: 10px;
+}
+
+.orderCard li {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #a7aafe;
+}
+
+.orderCard li+li {
+    padding-top: 0px;
+}
+
+.orderCard li h6 {
+    flex-shrink: 0;
+    color: #cca87c;
+}
+
+.orderCard li h6,
+.orderCard li p {
+    line-height: 25px;
+}
+
+/* ===== orderMsg_List (訂單訊息 - 購物清單)===== */
+.orderMsg_List{
+    position: relative;
+}
+
+.orderMsg_List h5{
+    font-size: 18px;
+    color: #459cf9;
+    letter-spacing: 1px;
+    font-family: 'CloudCalligraphy','Playfair Display';
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.orderMsg_List p{
+    font-size: 12px;
+    color: #81688c;
+}
+
+.orderMsg_List td span{
+    color: #459cf9;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-family: 'CloudCalligraphy';
+}
+
+.orderMsg_List table{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.orderMsg_List tr{
+    border-bottom: 1px solid #f0d8bc;
+}
+
+.orderMsg_List tr:first-child{
+    border-bottom: 1px dashed #c6b198;
+}
+
+.orderMsg_List th{
+    width: 10%;
+    padding: 10px 0;
+    color: #cca87c;
+}
+
+.orderMsg_List th:first-child{
+    width: 40%;
+    text-align: left;
+}
+
+.orderMsg_List td{
+    padding: 10px 0;
+    font-size: 13px;
+    text-align: center;
+    color: #cca87c;
+}
+
+.orderMsg_List td:first-child{
+    display: flex;
+    text-align: left;
+}
+
+.orderMsg_Img{
+    width: 60px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.orderMsg_List td>p{
+    color: #f00;
+}
+
+.orderMsg_List td>p::before{
+    content: 'NT$ ';
+    font-family: 'CloudCalligraphy';
+}
+
+.orderMsg_List>div{
+    padding-top: 60px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.orderMsg_count{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.orderMsg_count ul{ 
+    width: 300px;
+}
+
+.orderMsg_count li{
+    line-height: 20px;
+    font-size: 10px;
+    display: flex;
+    color: #a390a6;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderMsg_count li+li{
+    padding: 0;
+}
+
+.orderMsg_count span{
+    width: 100px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.orderMsg_count span::before{
+    content: 'NT$ ';
+    font-size: 10px;
+    font-family: 'CloudCalligraphy';
+}
+
+.orderMsg_count li::before{
+    content: attr(data-title);
+    font-size: 10px;
+}
+
+.orderMsg_count li:nth-last-child(2){
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #c6b198;
+}
+
+.orderMsg_count .checkTotal{
+    padding-top: 10px;
+}
+
+.orderMsg_count .checkTotal span{
+    font-size: 20px;
+    color: #f00;
+}
+
+.orderMsg_List .orderDel span{
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* 商品件數 & 布局按鈕 */
+/* ===== commLayout start ===== */
+.commLayout {
+    width: 100%;
+    background-color: rgba(184, 168, 148, 0.2);
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px; 
+}
+.commLayout>div{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    color: #6d7fcc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commLayout_count{
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;   
+    background-color: #e2d9ce;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff,
+                 0 1px 0 #fff,0 -1px 0 #fff;   
+}
+
+.commLayout_count span {
+    padding: 0 5px;
+    color: #83521e;
+}
+
+.commLayout_tool ul {
+    display: flex;
+    align-items: center;
+}
+
+.commLayout_tool li+li {
+    margin-left: 10px;
+}
+
+.commLayout_icons {
+    padding: 5px;
+    border: 2px solid transparent;
+    font-size: 18px;
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+    color: #946c6c;
+}
+
+.commLayout_icons.on {
+    border: 2px solid #fff;
+    background-color: #e2d9ce;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff,
+                 0 1px 0 #fff,0 -1px 0 #fff; 
+}
+
+.commLayout_tool select {
+    height: 35px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: #e2d9ce;
+    color: #6d7fcc;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff,
+                 0 1px 0 #fff,0 -1px 0 #fff; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.commLayout_tool option {
+    background-color: #f5dceb;
+}
+
+
+/* 商品頁數按鈕列 */
+/* ===== commPage start ===== */
+.commPage {
+    padding-top: 50px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.commPage a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.commPage ul {
+    display: flex;
+}
+
+.commPage li+li {
+    margin-left: 15px;
+}
+
+.commPage li.on a {
+    color: #CA3C3C;
+    text-decoration: underline;
+}
+
+.commPage_prev {
+    margin-right: 15px;
+}
+
+.commPage_prev a::after {
+    content: '<';
+    padding-left: 8px;
+}
+
+.commPage_next {
+    margin-left: 15px;
+}
+
+.commPage_next a::before {
+    content: ">";
+    margin-right: 8px;
+}
+
+/* 加入購物車 color & size 選擇 */
+/* sale_color start */
+/* sale_size start */
+.sale_color,
+.sale_size{
+    padding-top: 15px;
+}
+
+.sale_color p,
+.sale_size p{
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #90c2f3;
+    font-family: 'CloudCalligraphy';
+}
+
+.sale_color ul,
+.sale_size ul{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    color: #81688c;
+}
+
+.sale_color li,
+.sale_size li{
+    display: flex;
+}
+
+.sale_color li+li,
+.sale_size li+li{
+    margin-left: 8px;
+}
+
+.sale_color li.on,
+.sale_size li.on{
+    outline: 2px solid #90c2f3;
+}
+
+.sale_color .colorCard,
+.sale_size .sizeCard{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #999;
+}
+
+.sale_color input,
+.sale_size input{
+    display: none;
+}
+
+.sale_size p{
+    display: flex;
+    align-items: center;
+}
+
+.sale_size p span{
+    width: 20px;
+    text-align: center;
+}
+
+/* 加入購物車 數量 & 按鈕 */
+/* sale_count start */
+.sale_count{
+    width: 100%;
+    max-width: 400px;
+    padding-top: 50px;
+}
+
+.sale_count ul{
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.sale_count li{
+    width: calc(100% / 2 - 10px);
+    height: 45px;
+}
+
+.sale_count li+li{
+    margin-left: 10px;
+}
+
+.sale_number{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    color: #bbb;
+    display: flex;
+}
+
+.sale_number>div{
+    width: 25%;
+    height: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sale_number input{
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    text-align: center;
+    background-color: transparent;
+}
+
+.sale_number>div.on{
+    background-color: #eee;
+}
+
+.sale_count button{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #E33D26;
+    box-shadow: 0 0 10px 0 #8b2113 inset;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sale_count span{
+    font-size: 10px;
+    color: #bbb;
+}
+
+/* crumbs 麵包削 */
+.crumbs{
+    width: 100%;
+    margin: 0 auto 10px;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #999;
+    background-color: rgba(144, 194, 243, 0.2);
+    display: none;
+}
+
+.crumbs.on{
+    display: block;
+}
+
+.crumbs ul{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.crumbs li{
+    padding: 5px 10px 5px 30px;
+    text-shadow: 1px 0 0 #fff,-1px 0 0 #fff,
+                 0 1px 0 #fff,0 -1px 0 #fff;
+    font-size: 10px;
+    border: 2px solid #fff; 
+    position: relative; 
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.crumbs li:first-child{
+    border-radius: 5px 0 0 5px;
+}
+
+.crumbs li:last-child{
+    border-radius: 0 5px 5px 0;
+}
+
+.crumbs li:nth-child(odd){
+    color: #90C2F3;
+    background-color: #90C2F3;
+}
+
+.crumbs li:nth-child(even){
+    color: #d6bdc4;
+    background-color: #d6bdc4;
+}
+
+.crumbs li::before,
+.crumbs li::after{
+    content: '';
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    bottom: 0;   
+}
+
+.crumbs li::after{  
+    border-color: transparent transparent transparent #fff;
+    border-width: 16px 0 16px 26px;
+    right: -26px;
+    z-index: 1;
+}
+
+.crumbs li::before{
+    border-width: 14px 0 14px 24px;
+    right: -24px;
+    z-index: 2;
+}
+
+.crumbs li:nth-child(odd)::before{
+    border-color: transparent transparent transparent #90C2F3;
+}
+
+.crumbs li:nth-child(even)::before{
+    border-color: transparent transparent transparent #d6bdc4;
+}
+
+.crumbs li:last-child::before,
+.crumbs li:last-child::after{display: none;}
+
+
+/* sortMenu開啟按鈕 */
+.sortMenu_btn{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(184, 168, 148, 0.2);
+    text-align: center;
+    display: none;
+}
+
+.sortMenu_btn button{
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'CloudCalligraphy';
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background-color: #e2d9ce;
+    color: #6d7fcc;
+    text-shadow: 1px 0 0 #fff, 
+                 1px 0 0 #fff, 
+                  0 1px 0 #fff, 
+                  0 -1px 0 #fff;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+
+/* 商品分類選單 */
+.sortMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sortMenu_cnt {
+    width: 260px;
+    height: 700px;
+    padding: 0 10px 100px;
+    font-size: 14px;
+    overflow-y: scroll;
+}
+
+.sortMenu_cnt::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+    background-color: #f9f6e7;
+    box-shadow: 0 0 10px #e0d9ca inset;
+}
+
+.sortMenu_cnt::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #fcc777;
+    background: linear-gradient(0deg,#ffb951 ,#ffd89d,#ffb951 );
+}
+
+.sortMenu_cnt li {
+    color: #C79F62;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.sortMenu_title{
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sortMenu_title img{
+    width: 30px;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.sortMenu_title h5 {
+    font-weight: bold;
+    color: #6791bb;
+    cursor: pointer;
+}
+
+.sortMenu_title tt{
+    padding-left: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #F2A6A9;
+    font-family: 'CloudCalligraphy';
+    text-transform: uppercase;
+}
+
+.sortMore,
+.sortAct{
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #c6b198;
+}
+.sortAct li{
+    padding: 0 5px;
+    transition: 0.3s linear;
+}
+
+.sortMore_btn{
+    padding-bottom: 20px;
+    display: none;
+}
+
+.sortMore_btn button{
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid #6791bb;
+    background-color: transparent;
+    color: #6791bb;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.sortMore_btn span{
+    padding: 0 2px;
+}
+
+.sortMore_btn button:hover{
+    background-color: #6791bb;
+    color: #fff;
+}
+
+.sortMore_title{
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px dashed #c6b198;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s linear;
+}
+
+.sortMore_title h6{
+    letter-spacing: 2px;
+}
+
+.sortMore_title span{
+    transition: 0.3s linear;
+}
+
+.sortMore li.on .sortMore_title span{
+    transform: rotate(180deg);
+}
+
+.sortMore_list{
+    height: 0;  
+    padding: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.sortMore li.on .sortMore_list{
+    height: unset;
+    margin-top: 5px;
+    padding-bottom: 20px;
+    opacity: 1;
+}
+
+.sortMore_list label{
+    padding: 2px 15px 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #71a3d5;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.sortMore_list span{
+    font-size: 12px;
+}
+
+.sortMark input,
+.sortMore_list input{
+    display: none;
+}
+
+.sortMark input + div,
+.sortMore_list input + div{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #c6b198;
+    border-radius: 3px;
+    color: transparent;
+}
+
+.sortMark input:checked+div,
+.sortMore_list input:checked+div{
+    color: #c6b198;
+}
+
+.sortMark input + div{
+    position: absolute;
+    left: 5px;
+}
+
+.sortMark li{
+    padding: 0 5px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px dashed #c6b198;
+    transition: 0.3s linear;
+}
+
+.sortMark li+li{
+    border-bottom: 1px dashed #c6b198;
+}
+
+.sortMark label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.sortMark_img{
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.sortMark img{
+    width: unset;
+    max-width: 100px;
+    max-height: 30px;
+}
+
+.sortMark span{
+    font-family: 'CloudCalligraphy';
+    letter-spacing: 1px;
+    font-size: 10px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+
+ /* ========== hover & active 各別設定 ========== */
+ /* commList (商品清單格) */
+ @media (any-hover: hover){
+    .commCard:hover{box-shadow: 0 0 5px #99947f;}
+    .commCard:hover img{transform: scale(1.05);}
+    .commAdd:hover,.commLike:hover,.commDel:hover{
+        color: rgba(51, 51, 51, 0.8);
+        background-color: #fff;
+    }
+    .commAdd,.commLike,.commDel{display: none;}
+    .commCard:hover .commAdd,
+    .commCard:hover .commLike,
+    .commCard:hover .commDel{display: block;}
+    .commList.on .commCard:hover{
+        border-bottom: 1px dashed transparent;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+ }
+ .commAdd:active,.commLike:active,.commDel:active {
+    color: rgba(51, 51, 51, 0.8);
+    background-color: #fff; 
+}  
+
+/* orderMsg_List (訂單訊息 - 購物清單) */
+@media (any-hover: hover){
+    .orderDel span:hover{color: #333;}
+}
+.orderDel span:active{color: #333;}
+
+/* commPage (商品頁數按鈕列) */
+@media (any-hover: hover){
+    .commPage a:hover{color: #CA3C3C;}
+}
+.commPage a:active{color: #CA3C3C;}
+
+/* crumbs 麵包削 */
+@media (any-hover: hover){
+    .crumbs li:hover{
+        color: #459cf9;
+        box-shadow:  2px 0px 4px 2px #b1c3d6;
+    }  
+}
+.crumbs li:active{
+    color: #459cf9;
+    box-shadow:  3px 0px 4px 2px #b1c3d6;
+}  
+
+/* 加入購物車 數量 & 按鈕 */
+@media (any-hover: hover){
+    .sale_number>div:hover{background-color: #eee;}
+    .sale_count button:hover{background-color: #d45a49;}
+}
+.sale_number>div:active{background-color: #eee;}
+.sale_count button:active{background-color: #d45a49;}   
+
+/* 商品分類選單 */
+@media (any-hover: hover){
+    .sortMenu_btn button:hover{
+        background-color: #d8cfc4;
+        color: #fff;
+        text-shadow: none;
+    }
+    .sortAct li:hover,
+    .sortMore_title:hover{
+        background-color: #6da1d56b;
+        color: #fff;
+    }
+    .sortMark li:hover{
+       background-color: #c0ddfa6b;
+       color: #fff;
+    }
+}
+
+.sortMenu_btn button:active{
+    background-color: #d8cfc4;
+    color: #fff;
+    text-shadow: none;
+}
+
+.sortAct li:active,
+.sortMore_title:active{
+    background-color: #6da1d56b;
+    color: #fff;
+}
+.sortMark li:active{
+   background-color: #c0ddfa6b;
+   color: #fff;
+}
+
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 1199px){
+    .sortMenu_btn{
+        display: block;
+    }
+
+    .sortMenu{
+        width: 100%;
+        height: 100%;   
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        transform: translateX(-100%);     
+    }
+
+    .sortMenu.on{
+        transform: translateX(0%);
+        transition: 0.5s;
+    }
+
+    .sortMenu_close{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+
+    .sortMenu_close::after,
+    .sortMenu_close::before{
+        width: 35px;
+        height: 65px;
+        margin: auto;
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sortMenu_close::after{
+        content: '\00ab';
+        transform: rotate(0deg);
+    }
+
+    .sortMenu_close::before{
+        content: '';
+        border-radius: 5px 0 0 5px;
+        background-color: #000;
+    }
+
+    .sortMenu_cnt{
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        padding: 20px 10px 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+}
+
+
+@media only screen and (max-width: 970px) {
+    .orderMsg_List h5{
+        padding-top: 80px;
+        position: unset;
+        top: 0;
+        left: 0;
+    }
+ 
+    .orderMsg_List th{
+        display: none;
+    }
+    
+    .orderMsg_List tr{
+        border: 1px solid #ddba8e;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    .orderMsg_List tr:first-child{
+        border:none;
+    }
+      
+    .orderMsg_List tr + tr{
+        margin-top: 10px;
+    }
+    
+    .orderMsg_List td{
+        width: calc(100% / 3);
+        padding: 5px 10px;
+        display: flex;
+    }
+    
+    .orderMsg_List td:first-child{
+        width: 100%;
+        padding: 10px 50px 10px 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ddba8e;
+        justify-content: flex-start;
+    }
+    
+    .orderMsg_List td::before{
+        content: attr(data-title);
+        color: #A49178;
+    }
+    .orderMsg_count ul{ 
+        width: 100%;
+    }
+
+    .orderMsg_List .orderDel{
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        box-shadow: 0 0 5px #958a4f;
+        border-radius: 50%;
+        top: 10px;
+        right: 5px;
+    }
+    .orderMsg_List>div{
+        flex-direction: column;
+    }
+    .orderMsg_count{
+        width: 100%;
+        padding: 20px 15px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .orderMsg_cnt>ul>li {
+        width: 100%;
+        padding: 0;
+    }
+    .orderCard {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .commList li {
+        width: calc(100% / 3);
+    }
+    
+}
+
+@media only screen and (max-width: 650px) {
+    .commList li {
+        width: calc(100% / 2);
+    }
+
+    .crumbs ul{
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .orderMsg_List td{
+        width: calc(100% / 2);
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .commList li {
+        width: 100%;
+    }
+    .commLayout>div{
+        flex-direction: column;
+    }
+    .commLayout_count{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .commLayout_tool{
+        width: 100%;
+    }
+    .commLayout_tool ul{
+        justify-content: flex-end;
+    }
+}
+
+
+

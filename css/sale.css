@@ -1,0 +1,604 @@
+.saleBox {
+    width: 100%;
+}
+
+.saleCnt {
+    width: 100%;
+    max-width: 1200px;
+    padding: 5px 10px 100px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* ==== saleRight start ===== */
+
+.saleRight {
+    width: 900px;
+}
+
+.saleTop {
+    width: 100%;
+    display: flex;
+}
+
+/* saleTop_L start */
+.saleTop_L {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 50px;
+}
+
+.saleimgCnt {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: rgba(144, 194, 243, 0.2);
+}
+
+.saleimgCnt>img {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.saleimgCnt .zoom {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: none;
+}
+
+.saleimgCnt .icon-search {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.3;
+}
+
+.zoomShow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: calc(-100% - 10px);
+    background-color: #eee;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+}
+
+.zoomShow img {
+    position: absolute;
+}
+
+.saleTop_L ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.saleTop_L li {
+    width: calc(100% / 5);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.saleTop_L li>div {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.saleTop_L li.on>div {
+    border: 2px solid #bbb;
+    opacity: 1;
+}
+
+.saleTop_L ul img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* saleTop_R start */
+.saleTop_R {
+    width: 100%;
+    padding: 10px;
+}
+
+.saleTop_R h4 {
+    padding-bottom: 5px;
+    color: #90c2f3;
+    font-size: 14px;
+    line-height: 100%;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 14px;
+    font-family: 'CloudCalligraphy';
+}
+
+.saleTop_R h5 {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #81688c;
+}
+
+.price {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.price .icon-heart {
+    font-size: 18px;
+    color: #ff5353;
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price p::before {
+    content: "NT$ ";
+    font-size: 14px;
+}
+
+.price_new {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.price_disc {
+    font-size: 22px;
+    color: #ff5353;
+    font-weight: bold;
+}
+
+
+/* msgGroup start */
+.msgGroup {
+    padding-top: 20px;
+}
+
+.msgTitle {
+    padding: 10px;
+    line-height: 20px;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.msgTitle h6 {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.msgTitle .icon-truck {
+    padding-left: 5px;
+    color: #6795ed;
+    font-size: 14px;
+}
+
+.msgTitle p {
+    color: #999;
+}
+
+.msgTitle>span {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    color: #999;
+    transition: 0.5s;
+}
+
+.msgTitle.on>span {
+    transform: rotate(180deg);
+}
+
+.msgTitle.on+.msgCount {
+    display: block;
+}
+
+.msgCount {
+    padding: 20px 10px 0;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    display: none;
+}
+
+.msgCount span {
+    position: relative;
+    padding-left: 15px;
+    color: #888b94;
+}
+
+.msgCount span::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: rgb(74, 78, 92);
+    border-radius: 40% / 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.msgCount ul {
+    padding: 5px 0 25px;
+    padding-left: 15px;
+    line-height: 20px;
+}
+
+.noteMsg ul {
+    list-style-type: decimal;
+    padding-left: 30px;
+}
+
+/* ===== saleDemo start ===== */
+.saleDemo {
+    padding: 50px 10px 0;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.saleDemo img {
+    width: max-content;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* ===== guideBox start  ===== */
+.guideBox{
+    width: fit-content;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.guideBox.on{
+    z-index: 9999;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+ .guideClose{
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   position: absolute;
+   top: 0;
+   left: 0;
+   cursor: pointer;
+ }
+
+ .guideClose::before,
+ .guideClose::after{
+   width: 60px;
+   height: 35px;
+   margin: auto;
+   font-size: 25px;
+   color: #fff;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   display: none;
+ }
+
+ .guideClose::after{
+   content: '\00ab';
+   transform:  rotate(90deg);
+ }
+
+ .guideClose::before{
+   content: '';
+   border-radius: 5px 5px 0 0;
+   background-color: #000;
+ }
+ 
+ .guideCnt{
+   width: 800px;
+   height: 90%;
+   margin: auto;
+   padding: 20px 5px 5px 0;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   letter-spacing: .2em;
+   background-color: #fff;
+   box-shadow: 0 0 8px #333;
+   z-index: 1;
+ }
+
+.guideCnt>div{
+    padding: 10px;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+
+.guideCnt>div::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: 0 0 10px #b8d3fc inset;
+}
+
+.guideCnt>div::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(0deg,#3493fb ,#b8d3fc,#3493fb );
+}
+
+.guideCnt>span{
+    font-size: 25px;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.guideBox h2{
+    padding: 0 10px;
+    font-family: 'CloudCalligraphy';
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    color: #3493fb;
+}
+
+.guideTitle{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+.guideTitle h5{
+    padding: 0 10px;
+    font-size: 14px;
+    color: #656565;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.guideTitle span{
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    color: #656565;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.guideTitle.on span{
+    transform: rotate(180deg);
+}
+
+.guideTitle.on+.guideMsg{
+    display: block;
+}
+
+.guideMsg{
+    font-size: 12px;
+    display: none;
+}
+
+.guideMsg table{
+    width: 100%;
+}
+
+.guideMsg tr{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.guideMsg tr:first-child{
+    border-bottom: 1px solid #000;
+}
+
+.guideMsg th{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold; 
+    color: #111;   
+}
+
+.guideMsg td{
+    height: 40px;
+    line-height: 40px;
+    color: #656565;
+    text-align: center;
+}
+
+.guideNote{
+    padding: 30px 10px 0;
+    line-height: 20px;
+    font-size: 12px;
+    color: #b6afaf;
+}
+
+.sizeImg{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sizeImg img{
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* ========== 共同設定 ========== */
+/* hover & active 各別設定 */
+@media (any-hover: hover) {
+    .saleimgCnt:hover .zoom,
+    .saleimgCnt:hover .zoomShow {
+        display: block;
+    }
+    .saleTop_L li:hover>div,
+    .price .icon-heart:hover {
+        opacity: 1;
+    }
+    .saleTop_L li:hover>div {
+        border: 2px solid #bbb;
+    }
+}
+
+.price .icon-heart:active {
+    opacity: 1;
+}
+
+/* guideBox */
+@media (any-hover: hover){
+    .guideCnt>span:hover{color: #333;}
+}
+.guideCnt>span:active{color: #333;}
+
+
+/* ========== RWD 設定 ========== */
+
+@media only screen and (max-width: 1199px) {
+    .saleBox {
+        width: 100%;
+    }
+    .saleCnt {
+        flex-direction: column;
+    }
+    .saleRight {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .guideBox{
+      z-index: 9999;
+      transform: translateY(-100%);
+    }
+
+    .guideBox.on{
+       transform: translateY(0%);
+    }
+  
+    .guideClose{
+      display: block;
+    }
+
+    .guideClose::before,
+    .guideClose::after{
+        display: flex;
+    }
+  
+    .guideCnt{
+      width: calc(100% - 20px);
+      height: 85%;
+      top: 10px;
+      bottom: unset;
+    }
+    
+    .guideCnt>span{
+        display: none;
+    }
+
+    .guideMsg tr:first-child{
+        display: none;
+    }
+    .guideMsg tr{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .guideMsg td{
+        height: 25px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .guideMsg td::before{
+        content: attr(data-title);
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .saleTop {
+        flex-direction: column;
+    }
+    .saleTop_L {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+    .saleTop_L ul {
+        padding: 20px 0;
+    }
+    .saleimgCnt .icon-search {
+        display: none;
+    }
+    .sale_count {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .zoomShow {
+        top: calc(100% + 20px);
+        right: 0;
+    }
+}

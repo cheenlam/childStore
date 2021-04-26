@@ -1,0 +1,133 @@
+.actBox{
+    width: 100%;
+    padding-bottom: 100px;
+    margin: auto;
+}
+  
+/* ===== actSelect start ===== */
+.actSelect {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+  }
+  
+  .actSelect ul {
+    width: 100%;
+    display: flex;
+  }
+  
+  .actSelect li {
+    height: 70px;
+    line-height: 25px;
+    background-color: rgba(144, 194, 243, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #9d98bf;
+    position: relative;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .actSelect h6{
+    font-size: 15px;
+  }
+  
+  .actSelect li.on {
+    background-color: #90C2F3;
+    color: #fff;
+  }
+  
+  .actSelect li.on::before {
+    background-color: #90C2F3;
+  }
+  
+  .actSelect li.on h6 {
+    color: #fff;
+  }
+  
+  .actSelect li.on::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #90C2F3 transparent transparent transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -10px;
+  }
+  
+  .actSelect li+li::before{
+    content: '';
+    width: 1px;
+    height: 50px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  
+  .actSelect h6 {
+    color: #C79F62;
+  }
+  
+  .actTime {
+    padding: 15px 0 10px;
+    background-color: rgba(138, 180, 220, 0.4);
+    color: #999;
+    text-align: center;
+  }
+  
+  .actTime span {
+    padding: 0 5px;
+  }
+  
+/* ==== actBanner start ===== */
+.actBanner{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.actBanner img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.actBox .commList{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+}
+  
+ /* ========== hover & active 各別設定 ========== */
+ @media (any-hover: hover){
+    .actSelect li:hover {background-color: rgba(144, 194, 243, 0.4);}
+    .actSelect li.on:hover{background-color: #90C2F3;}
+}
+  
+
+/* ========== RWD 設定 ========== */
+@media only screen and (max-width: 900px){
+  .actSelect ul {
+    flex-wrap: wrap;
+  }
+  
+  .actSelect li {
+    min-width: calc(100% / 3);
+    border-bottom: 1px solid #ccc;
+  }
+  .actSelect li:nth-child(4)::after {
+    display: none;
+  }
+  .actSelect li.on::after {
+     display: none;
+  }
+}
